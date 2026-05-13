@@ -1,0 +1,61 @@
+<div class="container mt-5">
+    <h1 class="text-center mb-4"><i class="bi bi-patch-check-fill text-primary"></i> Registro Civil de Mascotas</h1>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">Registrar Nueva Mascota</div>
+                <div class="card-body">
+                    <form id="formMascota">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre de la Mascota</label>
+                            <input type="text" id="nombre" class="form-control" required placeholder="Ej: Firulais">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">RUT del Dueño</label>
+                            <input type="text" id="rut" class="form-control" required placeholder="12.345.678-9">
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Guardar Mascota</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mt-4">
+                <div class="card-header bg-info text-white">Buscar / Eliminar por RUT</div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input type="text" id="searchRut" class="form-control" placeholder="Ingrese RUT">
+                        <button class="btn btn-outline-secondary" onclick="buscarPorRut()">Buscar</button>
+                        <button class="btn btn-outline-danger" onclick="eliminarPorRut()">Eliminar Todos</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow-sm mt-4">
+                <div class="card-header bg-info text-white">Buscar / Eliminar por Nombre</div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input type="text" id="searchName" class="form-control" placeholder="Ingrese Nombre">
+                        <button class="btn btn-outline-secondary" onclick="buscarPorNombre()">Buscar</button>
+                        <button class="btn btn-outline-danger" onclick="eliminarPorNombre()">Eliminar Todos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <table class="table table-hover shadow-sm bg-white">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Mascota</th>
+                        <th>RUT Dueño</th>
+                        <th class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="listaMascotas">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

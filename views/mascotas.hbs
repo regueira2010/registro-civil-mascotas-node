@@ -1,0 +1,87 @@
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h1 class="display-5 fw-bold text-primary">
+                <i class="bi bi-shield-check"></i> Registro Civil de Mascotas
+            </h1>
+            <p class="lead text-muted">Sistema Oficial del Ministerio de las Mascotas - Gobierno de Chile</p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-4">
+            <div class="card shadow-sm mb-4 border-primary">
+                <div class="card-header bg-primary text-white fw-bold">
+                    <i class="bi bi-plus-circle me-2"></i>Nueva Inscripción
+                </div>
+                <div class="card-body">
+                    <form id="formMascota">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label fw-bold">Nombre de la Mascota</label>
+                            <input type="text" id="nombre" class="form-control" placeholder="Ej: Firulais" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="rut" class="form-label fw-bold">RUT del Dueño</label>
+                            <input type="text" id="rut" class="form-control" placeholder="12.345.678-9" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 shadow-sm">
+                            <i class="bi bi-save me-2"></i>Registrar Mascota
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card shadow-sm border-info">
+                <div class="card-header bg-info text-white fw-bold">
+                    <i class="bi bi-search me-2"></i>Gestión por RUT
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <input type="text" id="searchRut" class="form-control mb-2" placeholder="Ingrese RUT para filtrar">
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-info flex-grow-1" onclick="buscarPorRut()">
+                                <i class="bi bi-filter"></i> Filtrar
+                            </button>
+                            <button class="btn btn-outline-danger flex-grow-1" onclick="eliminarPorRut()">
+                                <i class="bi bi-trash3"></i> Vaciar RUT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                    <span class="fw-bold"><i class="bi bi-list-ul me-2"></i>Mascotas Registradas</span>
+                    <button class="btn btn-sm btn-outline-light" onclick="obtenerTodas()">
+                        <i class="bi bi-arrow-clockwise"></i> Actualizar
+                    </button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th><i class="bi bi-hash"></i> Nombre</th>
+                                <th><i class="bi bi-person-badge"></i> RUT Dueño</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaMascotas">
+                            <tr>
+                                <td colspan="3" class="text-center py-4 text-muted">
+                                    <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+                                    Cargando registros...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer bg-white text-end">
+                    <small class="text-muted" id="totalMascotas">Total: 0 registros</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

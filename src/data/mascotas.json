@@ -1,0 +1,46 @@
+[
+  {
+    "nombre": "Firulais",
+    "rutDueño": "12.345.678-9"
+  },
+  {
+    "nombre": "Kira",
+    "rutDueño": "15.987.654-3"
+  },
+  {
+    "nombre": "Luna",
+    "rutDueño": "18.234.567-1"
+  },
+  {
+    "nombre": "Toby",
+    "rutDueño": "10.456.789-k"
+  },
+  {
+    "nombre": "Milo",
+    "rutDueño": "20.123.456-7"
+  },
+  {
+    "nombre": "Coco",
+    "rutDueño": "16.789.012-3"
+  },
+  {
+    "nombre": "Bella",
+    "rutDueño": "19.345.678-2"
+  },
+  {
+    "nombre": "Thor",
+    "rutDueño": "11.234.567-8"
+  },
+  {
+    "nombre": "Simba",
+    "rutDueño": "17.890.123-4"
+  },
+  {
+    "nombre": "Max",
+    "rutDueño": "14.567.890-5"
+  },
+  {
+    "nombre": "Daisy",
+    "rutDueño": "13.456.789-6"
+  }
+]
