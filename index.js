@@ -9,9 +9,9 @@ const app = express();
 const DATA_PATH = path.join(__dirname, 'src/data/mascotas.json');
 
 app.engine('.hbs', engine({
-  extname: '.hbs',
-  defaultLayout: 'main',
-  layoutsDir: path.join(__dirname, 'views', 'layouts')
+    extname: '.hbs',
+    defaultLayout: 'main',
+    layoutsDir: path.join(__dirname, 'views', 'layouts')
 }));
 
 app.set('view engine', '.hbs');
@@ -20,6 +20,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.json());
 app.use(express.static('public'));
 
+const PORT = process.env.PORT || 3000;
 
 const leerMascotas = async () => {
     try {
@@ -111,4 +112,7 @@ app.use((req, res) => {
     });
 });
 
-app.listen(3000, () => console.log('Servidor en http://localhost:3000'));
+
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
