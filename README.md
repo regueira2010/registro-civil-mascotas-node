@@ -19,7 +19,9 @@ Este es un proyecto de gestión de mascotas desarrollado con **Node.js**, **Expr
 - **Bootstrap 5** (Estilos e iconos)
 - **FileSystem (fs/promises)** (Manejo de archivos JSON)
 
-## 🔧 Instalación y Uso
+## 🛠️ Instalación y Uso
 
 1. **Clonar el repositorio:**
-  
+   ```bash
+   git clone [https://github.com/regueira2010/registro-civil-mascotas-node.git](https://github.com/regueira2010/registro-civil-mascotas-node.git)
+   cd registro-civil-mascotas-node
